@@ -11,8 +11,9 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.lang.Exception
+import javax.inject.Inject
 
-class MainActivityViewModel(private val addNoteUseCase: AddNoteUseCase): ViewModel() {
+class MainActivityViewModel @Inject constructor(private val addNoteUseCase: AddNoteUseCase): ViewModel() {
 
     private val _success = MutableStateFlow<ToDoData?>(null)
     val success = _success.asStateFlow()
