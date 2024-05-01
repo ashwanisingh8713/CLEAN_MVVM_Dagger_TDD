@@ -26,9 +26,11 @@ import com.arch.app.ui.theme.CLEAN_MVVM_Dagger_TDDTheme
 import com.arch.app.vm.MainActivityViewModel
 import com.arch.domain.model.ToDoData
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 class MainActivity : ComponentActivity() {
 
+    @get:Inject
     val viewModel: MainActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
